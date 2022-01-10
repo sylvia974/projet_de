@@ -16,6 +16,7 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+  int leftDiceNumber = 4;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,11 +25,11 @@ class DicePage extends StatelessWidget {
                 children: [
 
                 Expanded(
-                  child: TextButton(onPressed:(){print('Vous avez appuyé sur l\'image de gauche');},
-                      child: Image.asset('asset/images/dice1.png', width: 200, height: 200))),
+                  child: TextButton(onPressed:(){print("Vous avez appuyé sur l'image de gauche");},
+                      child: Image.asset('asset/images/dice$leftDiceNumber.png', width: 200, height: 200))),
 
                 Expanded(
-                    child: TextButton(onPressed:(){print('Vous avez appuyé sur l\'image de droite');},
+                    child: TextButton(onPressed:(){print("Vous avez appuyé sur l'image de droite");},
                         child: Image.asset('asset/images/dice2.png',width: 200,height: 200))),
     ],
     ),
